@@ -1,0 +1,86 @@
+name: 🧬 Bio Problem Report
+description: Report biological or scientific issues in PanKgraph
+title: "[Bio Problem]: "
+labels: ["bio", "problem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a biological or scientific problem in PanKgraph!
+        
+  - type: dropdown
+    id: problem-category
+    attributes:
+      label: Problem Category
+      description: What category does this biological problem fall under?
+      options:
+        - Gene/Protein Annotation
+        - Pathway Information
+        - Species/Organism Data
+        - Functional Analysis
+        - Taxonomic Classification
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: affected-entity
+    attributes:
+      label: Affected Entity
+      description: What gene, protein, pathway, or organism is affected? (e.g., gene name, protein ID, pathway name)
+      placeholder: e.g., TP53, BRCA1, or metabolic pathway
+    validations:
+      required: false
+      
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: Please describe the biological problem in detail
+      placeholder: Describe the issue with the biological data or annotation...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected Result
+      description: What should the correct biological information be?
+      placeholder: What is the expected or correct biological information?
+    validations:
+      required: false
+      
+  - type: textarea
+    id: supporting-evidence
+    attributes:
+      label: Supporting Evidence
+      description: Please provide references, literature, or database links that support your report
+      placeholder: |
+        e.g., 
+        - PubMed ID: 12345678
+        - UniProt: P04637
+        - NCBI Gene: 7157
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this biological problem?
+      options:
+        - Minor (cosmetic issue)
+        - Moderate (incorrect but not critical)
+        - Major (significantly affects analysis)
+        - Critical (completely wrong information)
+      default: 0
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Add any other context, screenshots, or files about the problem here
+    validations:
+      required: false

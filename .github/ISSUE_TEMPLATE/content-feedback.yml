@@ -1,0 +1,63 @@
+name: 💬 Content Feedback
+description: Provide detailed feedback about PanKgraph content
+title: "[Content Feedback]: "
+labels: ["content", "feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to provide feedback about PanKgraph content!
+        
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: Content Type
+      description: What type of content is your feedback about?
+      options:
+        - Documentation
+        - Data Quality
+        - Visualization
+        - Analysis Results
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: feedback-details
+    attributes:
+      label: Detailed Feedback
+      description: Please provide detailed feedback about the content
+      placeholder: Tell us what you think about the content...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions for Improvement
+      description: Do you have any suggestions for how we could improve this content?
+      placeholder: Your suggestions...
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feedback?
+      options:
+        - Low
+        - Medium
+        - High
+      default: 0
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context or screenshots about the feedback here
+      placeholder: Any additional information...
+    validations:
+      required: false

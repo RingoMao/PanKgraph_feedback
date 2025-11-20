@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: PanKgraph Documentation
+    url: https://github.com/RingoMao/PanKgraph_feedback
+    about: Check the documentation for more information about PanKgraph
